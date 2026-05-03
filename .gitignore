@@ -1,0 +1,94 @@
+﻿## Build outputs
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+artifacts/
+**/publish/
+**/out/
+
+## Visual Studio / MSBuild
+.vs/
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+## Mono
+mono_crash.*
+
+## Build logs / diagnostics
+*.log
+*.tlog
+*.cachefile
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tmp
+*.tmp_proj
+*.vspscc
+*.vssscc
+.builds
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+
+## NuGet
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+
+## Test / coverage
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.VisualState.xml
+*_i.c
+*_p.c
+*_h.h
+coverage*.json
+coverage*.xml
+*.coverage
+*.coveragexml
+
+## ASP.NET scaffolding
+**/ScaffoldingReadMe.txt
+
+## Local-only settings overrides (do not commit real secrets)
+**/appsettings.*.local.json
+
+## JetBrains Rider / ReSharper
+.idea/
+*.sln.iml
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+## VS Code — ignore machine-local state; allow shared launch/tasks if present
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/settings.json
+
+## OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini

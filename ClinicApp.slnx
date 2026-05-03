@@ -1,0 +1,5 @@
+<Solution>
+  <Folder Name="/src-dotnet/">
+    <Project Path="src-dotnet/ClinicApp.Web/ClinicApp.Web.csproj" />
+  </Folder>
+</Solution>
