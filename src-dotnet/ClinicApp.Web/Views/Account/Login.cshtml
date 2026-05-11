@@ -1,0 +1,46 @@
+@model ClinicApp.Web.ViewModels.Account.LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+    var returnUrl = (string?)ViewData["ReturnUrl"];
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-5">
+        <h2 class="mb-3">Login</h2>
+
+        <div class="alert alert-info">
+            Default local admin: <code>admin</code> / <code>Admin123!</code>
+        </div>
+
+        <form method="post" action="/login">
+            @Html.AntiForgeryToken()
+            <input type="hidden" name="returnUrl" value="@returnUrl" />
+
+            <div class="mb-3">
+                <label asp-for="Username" class="form-label"></label>
+                <input asp-for="Username" class="form-control" autocomplete="username" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Password" class="form-label"></label>
+                <input asp-for="Password" class="form-control" autocomplete="current-password" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <div class="form-check mb-3">
+                <input asp-for="RememberMe" class="form-check-input" />
+                <label asp-for="RememberMe" class="form-check-label"></label>
+            </div>
+
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+            <button class="btn btn-primary" type="submit">Login</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
