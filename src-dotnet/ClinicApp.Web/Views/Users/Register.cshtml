@@ -1,0 +1,49 @@
+@model ClinicApp.Web.ViewModels.Users.RegisterUserViewModel
+@{
+    ViewData["Title"] = "Register user";
+    var roles = (List<SelectListItem>?)ViewData["Roles"] ?? new();
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <h2 class="mb-3">Register</h2>
+
+        <form method="post">
+            @Html.AntiForgeryToken()
+
+            <div class="mb-3">
+                <label asp-for="Username" class="form-label"></label>
+                <input asp-for="Username" class="form-control" autocomplete="username" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Password" class="form-label"></label>
+                <input asp-for="Password" class="form-control" autocomplete="new-password" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="ConfirmPassword" class="form-label"></label>
+                <input asp-for="ConfirmPassword" class="form-control" autocomplete="new-password" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="RoleName" class="form-label">Role</label>
+                <select asp-for="RoleName" class="form-select" asp-items="roles"></select>
+                <span asp-validation-for="RoleName" class="text-danger"></span>
+                <div class="form-text">If you are not an admin, registrations are forced to <code>EMPLOYEE</code>.</div>
+            </div>
+
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+            <button class="btn btn-primary" type="submit">Create user</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
