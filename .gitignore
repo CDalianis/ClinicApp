@@ -92,3 +92,6 @@ _ReSharper*/
 Thumbs.db
 ehthumbs.db
 Desktop.ini
+
+## Client-side vendor libraries (LibMan / copied dist)
+**/wwwroot/lib/bootstrap/
